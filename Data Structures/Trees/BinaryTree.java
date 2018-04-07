@@ -199,70 +199,70 @@ class Tree{
 				}
 			}
 
-			/**
-			* This method finds the Successor to the Node given.
-			* Move right once and go left down the tree as far as you can
-			*
-			* @param n Node that you want to find the Successor of
-			* @return The Successor of the node
-			*/
-			public Node findSuccessor(Node n){
-				if(n.right == null)
-				return n;
-				Node current = n.right;
-				Node parent = n.right;
-				while(current != null){
-					parent = current;
-					current = current.left;
-				}
-				return parent;
-			}
-
-			/**
-			* Returns the root of the Binary Tree
-			*
-			* @return the root of the Binary Tree
-			*/
-			public Node getRoot(){
-				return root;
-			}
-
-			/**
-			* Prints leftChild - root - rightChild
-			*
-			* @param localRoot The local root of the binary tree
-			*/
-			public void inOrder(Node localRoot){
-				if(localRoot != null){
-					inOrder(localRoot.left);
-					System.out.print(localRoot.data + " ");
-					inOrder(localRoot.right);
-				}
-			}
-
-			/**
-			* Prints root - leftChild - rightChild
-			*
-			* @param localRoot The local root of the binary tree
-			*/
-			public void preOrder(Node localRoot){
-				if(localRoot != null){
-					System.out.print(localRoot.data + " ");
-					preOrder(localRoot.left);
-					preOrder(localRoot.right);
-				}
-			}
-
-			/**
-			* Prints rightChild - leftChild - root
-			*
-			* @param localRoot The local root of the binary tree
-			*/
-			public void postOrder(Node localRoot){
-				if(localRoot != null){
-					postOrder(localRoot.left);
-					postOrder(localRoot.right);
-					System.out.print(localRoot.data + " ");
-				}
-			}
+	/**
+	* This method finds the Successor to the Node given.
+	* Move right once and go left down the tree as far as you can
+	*
+	* @param n Node that you want to find the Successor of
+	* @return The Successor of the node
+	*/
+	public Node findSuccessor(Node n){
+		if(n.right == null)
+		return n;
+		Node current = n.right;
+		Node parent = n.right;
+		while(current != null){
+			parent = current;
+			current = current.left;
 		}
+		return parent;
+	}
+
+	/**
+	* Returns the root of the Binary Tree
+	*
+	* @return the root of the Binary Tree
+	*/
+	public Node getRoot(){
+		return root;
+	}
+
+	/**
+	* Prints leftChild - root - rightChild
+	*
+	* @param localRoot The local root of the binary tree
+	*/
+	public void inOrder(Node localRoot){
+		if(localRoot != null){
+			inOrder(localRoot.left);
+			System.out.print(localRoot.data + " ");
+			inOrder(localRoot.right);
+		}
+	}
+
+	/**
+	* Prints root - leftChild - rightChild
+	*
+	* @param localRoot The local root of the binary tree
+	*/
+	public void preOrder(Node localRoot){
+		if(localRoot != null){
+			System.out.print(localRoot.data + " ");
+			preOrder(localRoot.left);
+			preOrder(localRoot.right);
+		}
+	}
+
+	/**
+	* Prints rightChild - leftChild - root
+	*
+	* @param localRoot The local root of the binary tree
+	*/
+	public void postOrder(Node localRoot){
+		if(localRoot != null){
+			postOrder(localRoot.left);
+			postOrder(localRoot.right);
+			System.out.print(localRoot.data + " ");
+		}
+	}
+}
